@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { WeatherComponent } from '../weather/weather.component';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'app-main',
-  imports: [],
+  imports: [WeatherComponent, MenuComponent],
   templateUrl: './main.component.html',
-  styleUrl: './main.component.scss'
+  styleUrls: ['./main.component.scss']
 })
 export class MainComponent {
 
