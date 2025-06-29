@@ -1,1 +1,20 @@
-<p>weather works!</p>
+@if (!store.weatherData) {
+<p>Loading weather data...</p>
+}
+
+@else {
+
+
+<div class="card" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave()">
+  <div class="glow">
+    <div class="content">
+      {{ store.weatherData.main.temp.toFixed(1) }}°C
+      <div class="weather-icon">
+        <img [src]="'https://openweathermap.org/img/wn/' + store.weatherData.weather[0].icon + '@2x.png'"
+          alt="Weather Icon">
+      </div>
+    </div>
+  </div>
+</div>
+
+}

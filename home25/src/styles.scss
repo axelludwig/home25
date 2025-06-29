@@ -1,4 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
 body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    perspective: 1500px;
+    background: linear-gradient(white, #efefef);
+
     margin: 0;
     padding: 0;
 

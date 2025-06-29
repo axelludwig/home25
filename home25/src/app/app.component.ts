@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { WeatherComponent } from './weather/weather.component';
 import { MainComponent } from './main/main.component';
-import { HttpService } from '../core/http.service';
+import { HttpService } from './services/http.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, WeatherComponent, MainComponent],
+  imports: [RouterOutlet, MainComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
