@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { WeatherComponent } from '../weather/weather.component';
-import { MenuComponent } from '../menu/menu.component';
+import { WeatherComponent } from '../../features/weather/weather.component';
+import { MenuComponent } from '../../features/menu/menu.component';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +8,4 @@ import { MenuComponent } from '../menu/menu.component';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
-
-}
+export class MainComponent { }

@@ -1,0 +1,121 @@
+:host {
+    display: block;
+    height: 100dvh;
+    overflow: hidden;
+    color: var(--ui-text);
+}
+
+.screen {
+    height: 100%;
+    box-sizing: border-box;
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 7vw, 6rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    overflow: hidden;
+}
+
+.brand {
+    font-family: 'Neue Haas Display', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: clamp(2rem, 4.8vw, 3.6rem);
+    letter-spacing: 0.01em;
+    opacity: 0.95;
+}
+
+.menu-strip {
+    margin-top: auto;
+}
+
+.content {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(180px, 240px) minmax(340px, 560px) minmax(240px, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    min-height: 0;
+    overflow: hidden;
+}
+
+.intro {
+    font-family: 'Neue Haas Display', 'Helvetica Neue', sans-serif;
+    font-weight: 200;
+    font-size: clamp(0.95rem, 1.4vw, 1.2rem);
+    line-height: 1.25;
+    color: var(--ui-text-soft);
+}
+
+.intro-title {
+    display: inline-block;
+    padding: 0.15rem 0.6rem;
+    margin-bottom: 0.7rem;
+    background: var(--ui-active);
+    color: var(--ui-text-dim);
+    font-weight: 400;
+    text-transform: lowercase;
+}
+
+.panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.panel-main {
+    padding: 1.1rem;
+}
+
+.panel-ghost {
+    background-image:
+        linear-gradient(to bottom, rgba(201, 229, 244, 0.08) 0%, rgba(201, 229, 244, 0.45) 100%),
+        url('/bg2b&w.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.7) contrast(0.9);
+}
+
+@media (max-width: 1080px) {
+    .content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            'intro intro'
+            'main ghost';
+    }
+
+    .intro {
+        grid-area: intro;
+        max-width: 56ch;
+    }
+
+    .panel-main {
+        grid-area: main;
+    }
+
+    .panel-ghost {
+        grid-area: ghost;
+    }
+}
+
+@media (max-width: 760px) {
+    .screen {
+        gap: 1.2rem;
+        padding: clamp(1rem, 3vw, 1.5rem);
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'intro'
+            'main'
+            'ghost';
+        min-height: auto;
+        overflow-y: auto;
+    }
+
+    .panel-ghost {
+        min-height: 180px;
+    }
+}

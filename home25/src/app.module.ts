@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app/app.component';
 
 
-// Import du CoreModule qu'on vient de créer
+// Import the CoreModule we just created
 // import { CoreModule } from './core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './app/weather/weather.component';
@@ -18,7 +18,7 @@ import { MenuComponent } from './app/menu/menu.component';
     ],
     imports: [
         BrowserModule
-        // HttpClientModule,    // <-- Ajout obligatoire
+        // HttpClientModule,    // <-- Mandatory addition
         // CoreModule,
     ],
     bootstrap: [AppComponent]

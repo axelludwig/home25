@@ -27,7 +27,7 @@ export class GeolocationService {
     getCurrentPosition(): Observable<Coordinates> {
         return new Observable<Coordinates>(observer => {
             if (!isPlatformBrowser(this.platformId) || !('geolocation' in navigator)) {
-                observer.error('Géolocalisation non supportée');
+                observer.error('Geolocation not supported');
                 return;
             }
 

@@ -1,0 +1,13 @@
+<nav class="menu" aria-label="Project navigation">
+    @for (link of links; track link.label; let isLast = $last) {
+    <a class="item" [href]="link.url" target="_blank" rel="noopener noreferrer" (mouseenter)="onHover(link)"
+        (focus)="onHover(link)" (mouseleave)="onLeave()" (blur)="onLeave()">
+        {{ link.label }}
+    </a>
+    @if (!isLast) {
+    <span class="sep" aria-hidden="true">|</span>
+    }
+    }
+</nav>
+
+<p class="description">{{ hoveredDescription }}</p>

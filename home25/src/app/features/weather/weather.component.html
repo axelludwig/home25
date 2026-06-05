@@ -1,0 +1,43 @@
+@if (!store.weatherData) {
+<section class="weather-shell loading">
+  <p>loading weather data</p>
+</section>
+}
+
+@else {
+
+<section class="weather-shell card" (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave()">
+  <header class="location">
+    {{ store.weatherData.name }}, {{ store.weatherData.sys.country }}
+  </header>
+
+  <div class="topline">
+    <p class="temperature">{{ store.weatherData.main.temp.toFixed(1) }}°C</p>
+    <div class="weather-icon">
+      <img [src]="'https://openweathermap.org/img/wn/' + store.weatherData.weather[0].icon + '@2x.png'" alt="Weather Icon">
+    </div>
+  </div>
+
+  <p class="condition">{{ store.weatherData.weather[0].description }}</p>
+
+  <div class="metrics">
+    <div class="row">
+      <span>feels like</span>
+      <span>{{ store.weatherData.main.feels_like.toFixed(1) }}°C</span>
+    </div>
+    <div class="row">
+      <span>humidity</span>
+      <span>{{ store.weatherData.main.humidity }}%</span>
+    </div>
+    <div class="row">
+      <span>wind</span>
+      <span>{{ store.weatherData.wind.speed }} m/s</span>
+    </div>
+    <div class="row">
+      <span>pressure</span>
+      <span>{{ store.weatherData.main.pressure }} hPa</span>
+    </div>
+  </div>
+</section>
+
+}

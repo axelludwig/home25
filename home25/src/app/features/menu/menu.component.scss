@@ -1,0 +1,60 @@
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.95rem;
+    font-family: 'Neue Haas Display', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.05rem, 1.9vw, 1.95rem);
+    color: var(--ui-text);
+}
+
+.item {
+    color: inherit;
+    font: inherit;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    padding: 0.15rem 0.55rem;
+    border-radius: 0;
+    line-height: 1;
+    text-decoration: none;
+    box-shadow: 0 0 0 0 transparent;
+    transition: background-color 120ms ease-out, color 120ms ease-out, box-shadow 120ms ease-out;
+}
+
+.item:hover,
+.item:focus-visible {
+    background: var(--ui-active);
+    color: var(--ui-text-dim);
+    box-shadow: 0 0 0 0.16rem var(--ui-active);
+    outline: none;
+}
+
+.sep {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    line-height: 1;
+}
+
+.description {
+    margin: 0.85rem 0 0;
+    max-width: 62ch;
+    font-family: 'Neue Haas Display', sans-serif;
+    font-weight: 400;
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    line-height: 1.25;
+    color: var(--ui-text-soft);
+    min-height: 2.4em;
+}
+
+@media (max-width: 760px) {
+    .menu {
+        gap: 0.65rem;
+        font-size: 1.15rem;
+    }
+
+    .description {
+        min-height: 3.2em;
+    }
+}
