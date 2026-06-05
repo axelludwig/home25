@@ -1,0 +1,27 @@
+[
+  {
+    "label": "cloud",
+    "url": "https://cloud.linkenparis.com",
+    "description": "my personal cloud"
+  },
+  {
+    "label": "download",
+    "url": "https://download.linkenparis.com",
+    "description": "download videos and music from youtube, tiktok, instagram and more"
+  },
+  {
+    "label": "fossason",
+    "url": "https://fossason.linkenparis.com",
+    "description": "music discord bot"
+  },
+  {
+    "label": "torrent",
+    "url": "https://torrent.linkenparis.com",
+    "description": "torrent uploader"
+  },
+  {
+    "label": "map",
+    "url": "https://map.linkenparis.com",
+    "description": "interactive map for my minecraft server"
+  }
+]
