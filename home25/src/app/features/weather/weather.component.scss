@@ -2,13 +2,6 @@
   display: block;
   height: 100%;
   font-family: 'Neue Haas Display', 'Helvetica Neue', sans-serif;
-  perspective: 1200px;
-}
-
-.card {
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 170ms ease-out, box-shadow 170ms ease-out;
 }
 
 .weather-shell {
@@ -21,7 +14,6 @@
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.24);
   padding: 1rem;
-  box-shadow: 0 18px 42px rgba(7, 16, 31, 0.18);
 }
 
 .location {
