@@ -23,5 +23,10 @@
     "label": "map",
     "url": "https://map.linkenparis.com",
     "description": "interactive map for my minecraft server"
+  },
+  {
+    "label": "homeassistant",
+    "url": "https://homeassistant.linkenparis.com/",
+    "description": "smart home dashboard"
   }
 ]
