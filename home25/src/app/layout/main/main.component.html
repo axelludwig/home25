@@ -6,13 +6,18 @@
     </section>
 
     <section class="content">
-        <aside class="intro">
-        </aside>
-
-        <div class="panel panel-main">
-            <app-weather></app-weather>
+        <div class="time-zone">
+            <section class="time-widget card-3d" aria-label="Date et heure actuelles" appCard3d>
+                <p class="time-label">local time</p>
+                <p class="time-value">{{ currentTime }}</p>
+                <p class="date-value">{{ currentDay }} - {{ currentDate }}</p>
+            </section>
         </div>
 
-        <div class="panel panel-ghost" aria-hidden="true"></div>
+        <section class="weather-zone" aria-label="Meteo actuelle">
+            <app-weather></app-weather>
+        </section>
+
+        <section class="forest-zone" aria-label="Visuel forêt"></section>
     </section>
 </div>
