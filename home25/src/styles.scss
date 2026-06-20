@@ -3,6 +3,15 @@
     --ui-text-soft: rgba(238, 246, 251, 0.82);
     --ui-text-dim: #21566f;
     --ui-active: #dceef8;
+    --ui-bg-base: #4d89ab;
+    --ui-bg-grad-top: rgba(40, 102, 138, 0.68);
+    --ui-bg-grad-mid: rgba(99, 154, 185, 0.62);
+    --ui-bg-grad-bottom: rgba(110, 171, 203, 0.62);
+    --ui-forest-image: url('/bg2b&w.jpg');
+    --ui-forest-tint-top: rgba(40, 102, 138, 0.68);
+    --ui-forest-tint-mid: rgba(99, 154, 185, 0.62);
+    --ui-forest-tint-bottom: rgba(110, 171, 203, 0.62);
+    --ui-forest-blend-mode: multiply;
 }
 
 html,
@@ -22,14 +31,11 @@ body {
     color: var(--ui-text);
     font-family: 'Neue Haas Display', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 500;
-    background-color: #4d89ab;
-    background-image:
-        linear-gradient(180deg, rgba(40, 102, 138, 0.68) 0%, rgba(99, 154, 185, 0.62) 60%, rgba(110, 171, 203, 0.62) 100%),
-        url('../public/bg2b&w.jpg');
+    background-color: var(--ui-bg-base);
+    background-image: linear-gradient(180deg, var(--ui-bg-grad-top) 0%, var(--ui-bg-grad-mid) 60%, var(--ui-bg-grad-bottom) 100%);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-blend-mode: multiply;
 }
 
 body::before {
@@ -41,6 +47,20 @@ body::before {
         radial-gradient(circle at 25% 10%, rgba(220, 241, 255, 0.13) 0%, rgba(220, 241, 255, 0) 50%),
         linear-gradient(180deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0) 42%);
     z-index: -1;
+}
+
+.card-3d {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 170ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-3d {
+        transition: none;
+    }
 }
 
 @font-face {
